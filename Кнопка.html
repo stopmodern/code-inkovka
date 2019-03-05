@@ -1,0 +1,426 @@
+<style type="text/css">
+.btnflip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  transform-origin: center center;
+}
+.btnflip-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  background-color: rgba(255,255,255, .05);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: 1s;
+}
+.btnflip-item.btnflip__front {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip:hover .btnflip-item.btnflip__front {
+  transform: rotateX(-180deg) translateZ(20px);
+}
+.btnflip-item.btnflip__back {
+  transform: rotateX(180deg) translateZ(20px);
+}
+.btnflip:hover .btnflip-item.btnflip__back {
+  transform: rotateX(0deg) translateZ(20px);
+}
+.btnflip-item.btnflip__center {
+  background: linear-gradient(to left, #c31a5b, #7129bd);
+}
+.btnflip-item.btnflip__center::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, #ffdd1f, #c31a5b);
+  border-radius: 30px;
+  transform: translateZ(-1px);
+}
+.btnflip:hover .btnflip-item.btnflip__center {
+  transform: rotateX(-180deg);
+}
+</style>
+
+<a class="btnflip" href="#!">
+		<span class="btnflip-item btnflip__front">Смотреть отчёт</span>
+		<span class="btnflip-item btnflip__center"></span>
+		<span class="btnflip-item btnflip__back">Смотреть отчёт</span>
+</a>
+
+============================================================
+<style type="text/css">
+a.button1::before {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: #959595 0 2px 5px;
+    -moz-box-shadow: #959595 0 2px 5px;
+    border-radius: 3px;
+    box-shadow: #959595 0 2px 5px;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%; }
+    
+a.button1:active::before { padding: 1px 0 0; }
+a.button1.xbox {
+    background: #c4e125;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#c4e125), to(#88a819));
+    background: -moz-linear-gradient(#c4e125, #88a819);
+    background: linear-gradient(#c4e125, #88a819);
+    border: solid 1px #829c15;
+    border-bottom: solid 3px #819d15;
+    box-shadow: inset 0 0 0 1px #c6da7b;
+    color: #fff;
+    text-shadow: 0 1px 0 #819d15; }
+    
+a.button1.xbox:hover {
+    background: #88a819;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#88a819), to(#c4e125));
+    background: -moz-linear-gradient(#88a819, #c4e125);
+    background: linear-gradient(#88a819, #c4e125);
+    border: solid 1px #829c15;
+    border-bottom: solid 3px #819d15;
+    box-shadow: inset 0 0 0 1px #c6da7b; }
+    
+a.button1.xbox:active {
+    background: #88a819;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#88a819), to(#c4e125));
+    background: -moz-linear-gradient(#88a819, #c4e125);
+    background: linear-gradient(#88a819, #c4e125);
+    border: solid 1px #829c15;
+    box-shadow: inset 0 10px 15px 0 #819d15; }
+    </style>
+    
+     <a href="#" class="button1 xbox">Смотреть отчёт</a>
+=================================================================
+<style type="text/css">
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 19px 39px 18px;
+    font-size: 18px;
+	
+}
+.ph-btn-blue {
+
+    border-color: #326E99;
+    background-color: #3F8ABF;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #397CAC;
+    border-color: #326E99;   
+}
+/*DEMO ONLY FOR CENTER POSITION*/
+.ph-container {
+  
+  margin: 0 auto;
+  display: inline; 
+}
+.ph-float {
+  
+  float: left;
+  width: 22%;
+  padding: 10px;  
+  padding-top: 50px;  
+  text-align: center;
+}
+.ph-clear {
+  
+  clear: both; 
+}
+</style>
+
+
+
+<div class="ph-container">
+  
+    <div class="ph-float">
+        <a href='#' class='ph-button ph-btn-blue'>Flat Blue</a>
+    </div>
+</div>    
+
+<div class="ph-clear"></div>   
+===================================
+<style type="text/css">
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 14px 30px 13px;
+    font-size: 18px;
+	
+}
+.ph-btn-blue {
+
+    border-color: #6906cb;
+    background-color: #9966cc;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #894ac8;
+    border-color: #6105ba;   
+       color: #FFFFFF;	 
+}
+</style>
+
+        <a href='http://inkovka.com/novosti-kompanii/item/1076-otchjot-proekt-kovki-atrij-1-obzor' class='ph-button ph-btn-blue'>Смотреть отчёт&nbsp;&nbsp;<b>>></b></a>
+
+=============================================================
+<table align="center" cellpadding="10" cellspacing="10" width="100%">
+	<tbody>
+		<tr>
+			<td align="center" colspan="2">
+				<p>
+					<font size="+2" color="#0a67a4"><strong>Узнайте больше об этом проекте!</strong></font></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<font size="+1" color="#990000"><p>
+					• Больше фото и видео</p>
+				<p>
+					• Описание процесса</p>
+				<p>
+					• Отзывы заказчиков</p></font>
+			</td>
+			<td>
+				<p>
+					&nbsp;</p>
+				<style type="text/css">
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 14px 25px 13px;
+    font-size: 18px;
+	
+}
+.ph-btn-blue {
+
+    border-color: #6906cb;
+    background-color: #9966cc;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #894ac8;
+    border-color: #6105ba;   
+       color: #FFFFFF;	 
+}				</style>
+				<p>
+					<a class="ph-button ph-btn-blue" href="#">Смотреть отчёт&nbsp;&nbsp;<b>&gt;&gt;</b></a></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+=============================================================
+<br />
+<p style="text-align: center;">
+	<font color="#0a67a4" size="+2"><strong>Узнайте больше об этом проекте!</strong></font></p>
+<p>
+	<br />
+	<font color="#990000" size="+1">
+	<style type="text/css">
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 14px 25px 13px;
+    font-size: 20px;
+	
+}
+.ph-btn-blue {
+
+    border-color: #6906cb;
+    background-color: #9966cc;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #894ac8;
+    border-color: #6105ba;   
+       color: #FFFFFF;	 
+}	</style>
+	</font></p>
+<p style="text-align: center;">
+	<a class="ph-button ph-btn-blue" href="#" target="_blank">Смотреть обзор&nbsp;&nbsp;<b>&gt;&gt;</b></a></p>
+<br />
+<p>
+	<img alt="" class="cke-resize cke-resize" src="images/content/ot4et_knopka_2018_2.jpg" style="height: 75px; float: left; margin-left: 15px; margin-right: 15px; width: 127px;" /></p>
+<p>
+	<font color="#990000" size="+1">• Больше фото и видео </font></p>
+<p>
+	<font color="#990000" size="+1">• Описание процесса</font></p>
+<p>
+	<font color="#990000" size="+1">• Отзывы заказчиков</font></p>
+<div>
+	&nbsp;</div>
+<div>
+	&nbsp;</div>
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+КНОПКА КРАСНАЯ
+<br />
+<p style="text-align: center;">
+	<font color="#0a67a4" size="+2"><strong>Узнайте больше об этом проекте!</strong></font></p>
+<p>
+	<br />
+	<font color="#990000" size="+1">
+	<style type="text/css">
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 14px 25px 13px;
+    font-size: 20px;
+	
+}
+.ph-btn-blue {
+
+    border-color: #ca5353;
+    background-color: #ff6666;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #f23e3e;
+    border-color: #c92f2f;   
+       color: #FFFFFF;	 
+}	</style>
+	</font></p>
+<p style="text-align: center;">
+	<a class="ph-button ph-btn-blue" href="tel:+7-831-291-63-11" target="_blank"><b>&gt;&gt;</b> Набрать номер!</a></p>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+КНОПКА КРАСНАЯ КАЛЕНДАРЬ
+<p>
+	<br />
+	<font color="#990000" size="+1">
+	<style type="text/css">
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Open Sans,Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 14px 25px 13px;
+    font-size: 20px;
+	
+}
+.ph-btn-blue {
+
+    border-color: #ca5353;
+    background-color: #ff6666;
+}
+
+.ph-btn-blue:hover, .ph-btn-blue:focus, .ph-btn-blue:active {
+    background-color: #f23e3e;
+    border-color: #c92f2f;   
+       color: #FFFFFF;	 
+}	</style>
+	</font></p>
+<p style="text-align: center;">
+	<a class="ph-button ph-btn-blue" href="#" target="_blank"><b>&gt;&gt;</b>&nbsp;&nbsp;Смотреть календарь</a></p>
+
