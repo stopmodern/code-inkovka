@@ -61,3 +61,31 @@ frameborder="0" allow="autoplay"></iframe>
 </script>
 
 	<iframe allow="autoplay" frameborder="0" height="546" id="playeryt" src="https://www.youtube.com/embed/oIZTvanJoDA?autoplay=1&version=3&fmt=6&rel=0&fs=1&showinfo=0&modestbranding=0&controls=0&loop=1&&mute=1&enablejsapi=1&playlist=oIZTvanJoDA" width="970"></iframe>
+	
+2019 работает моб+деск (старая версия которая вдруг снова заработала)
+<div style="text-align: center;">
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('playeryt', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady() {
+        player.playVideo();
+        player.mute();
+    }
+    
+</script>	<iframe allowfullscreen="" frameborder="0" height="546" id="playeryt" src="//www.youtube.com/embed/oIZTvanJoDA?autoplay=1&amp;version=3&amp;fmt=6&amp;controls=0&amp;loop=1&amp;modestbranding=0&amp;enablejsapi=1&amp;rel=0&amp;showinfo=0&amp;playlist=oIZTvanJoDA&amp;fs=1" width="970"></iframe></div>
+
+2019 работает только десктоп (новая версия после изменений по mute)
+<div style="text-align: center;">
+	<iframe allow="autoplay" frameborder="0" height="546" id="playeryt" src="https://www.youtube.com/embed/oIZTvanJoDA?autoplay=1&amp;version=3&amp;fmt=6&amp;rel=0&amp;fs=1&amp;showinfo=0&amp;modestbranding=0&amp;controls=0&amp;loop=1&amp;&amp;mute=1&amp;enablejsapi=1&amp;playlist=oIZTvanJoDA" width="970"></iframe></div>
+
