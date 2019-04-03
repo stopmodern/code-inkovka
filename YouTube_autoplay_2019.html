@@ -1,5 +1,5 @@
 
- НЕ РАБОТАЕТ!
+ НЕ РАБОТАЕТ! (уже работает но ладно. Версия 2017 года)
 
  <script>
   var tag = document.createElement('script');
@@ -22,6 +22,9 @@
     
 </script>	<iframe allowfullscreen="" frameborder="0" height="546" id="playeryt" src="//www.youtube.com/embed/oIZTvanJoDA?autoplay=1&mute=1&version=3&fmt=6&controls=0&loop=1&modestbranding=0&enablejsapi=1&amp;rel=0&showinfo=0&playlist=oIZTvanJoDA&fs=1" width="970"></iframe>
 
+<!-- мануал https://sergeychunkevich.com/dlya-web-mastera/youtube-parametry/ -->
+<!-- мануал YT https://developers.google.com/youtube/player_parameters -->
+<!-- 10 плееров https://postovoy.net/10-jquery-pleerov-dlya-vosproizvedeniya-video-s-youtube-i-vimeo.html -->
 
 ЧАСТИ
 <iframe type="text/html" src="www.youtube.com/embed/oIZTvanJoDA?autoplay=1
@@ -88,4 +91,27 @@ frameborder="0" allow="autoplay"></iframe>
 2019 работает только десктоп (новая версия после изменений по mute)
 <div style="text-align: center;">
 	<iframe allow="autoplay" frameborder="0" height="546" id="playeryt" src="https://www.youtube.com/embed/oIZTvanJoDA?autoplay=1&amp;version=3&amp;fmt=6&amp;rel=0&amp;fs=1&amp;showinfo=0&amp;modestbranding=0&amp;controls=0&amp;loop=1&amp;&amp;mute=1&amp;enablejsapi=1&amp;playlist=oIZTvanJoDA" width="970"></iframe></div>
+	
+2019 работает моб+деск (старая версия которая вдруг снова заработала) + скрыл интерфейс + убрал рамку справа
+<div style="text-align: center;">
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('playeryt', {
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady() {
+        player.playVideo();
+        player.mute();
+    }
+    
+</script>	<iframe allowfullscreen="" frameborder="0" height="546" id="playeryt" src="//www.youtube.com/embed/oIZTvanJoDA?autoplay=1&&mute=1amp;version=3&amp;fmt=6&amp;controls=0&amp;loop=1&amp;modestbranding=1&amp;enablejsapi=1&amp;rel=0&amp;showinfo=0&amp;playlist=oIZTvanJoDA&amp;fs=0" width="971"></iframe></div>
 
